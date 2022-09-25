@@ -1,0 +1,46 @@
+.historyTitle{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+.historyWrapper{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    .title{
+        font-size: 30px;
+        color: #fff;
+        font-weight: 100;
+        margin-bottom: 10px;
+    }
+    .weatherWrapper{
+        background-image: url('https://img.freepik.com/free-vector/blue-sky-with-shiny-clouds-background_1017-23279.jpg?w=360');
+        background-size: cover;
+        border-radius: 35px;
+        background-position: initial;
+        background-position: center;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        .weather{
+            text-align: center;
+        }
+        .locationName{
+            color: #fff;
+            font-size: 35px;
+            margin-bottom: 10px;  
+        }
+        .celsi{
+            color: #fff;
+            font-size: 25px;
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .historyWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

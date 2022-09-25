@@ -1,0 +1,28 @@
+.searchWrapper{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    .inputSearch{
+        width: 100%;
+        border: none;
+        padding: 10px;
+        font-weight: 100;
+        border-radius: 35px;
+    }
+    .btnSearch{
+        border: none;
+        background-color: #F39611;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 100;
+        cursor: pointer;
+        border-radius: 35px;
+        padding: 10px;
+        transition-duration: 0.5s;
+    }
+    .btnSearch:hover {
+        background-color: #048AD7;
+        color: #fff;
+    }
+}

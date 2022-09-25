@@ -1,0 +1,51 @@
+.homeWrapper{
+    width: 500px;
+    height: 350px;
+    background-image: url('https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 35px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+    .infoWrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        .dataWrapper{
+            .dayTitle{
+                font-size: 40px;
+                color: #fff;
+                font-weight: 100;
+                margin-bottom: 5px;
+            }
+            .cityName{
+                font-size: 25px;
+                color: #fff;
+            }
+        }
+        .weatherIcon{
+            .imgIconWraper{
+                display: flex;
+                align-items: center;
+            }
+            .temperatureTitle{
+                font-size: 40px;
+                color: #fff;
+                font-weight: bold;
+            }
+            .feelsLikeTitle{
+                font-size: 15px;
+                color: #fff;
+                font-weight: 100;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .homeWrapper{
+        width: 300px;
+        height: 400px;
+    }
+}
