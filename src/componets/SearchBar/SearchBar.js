@@ -9,6 +9,7 @@ const SearchBar = ({changePhrase,loadWeatherRequest,phrase, weatherRedux,addHist
     } else {
         loadWeatherRequest(phrase)
         addHistory(weatherRedux)
+        changePhrase('')
     }
    }
 
@@ -18,6 +19,7 @@ const SearchBar = ({changePhrase,loadWeatherRequest,phrase, weatherRedux,addHist
                 className={styles.inputSearch}
                 type="text"
                 placeholder='Wpisz miasto'
+                value = {phrase}
                 onChange={(e)=>changePhrase(e.target.value)}
                 >
             </input>

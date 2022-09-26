@@ -10,6 +10,10 @@ const HistorySearch = ({historyList}) => {
             {historyList.map(history =>(
                 <div className={styles.weatherWrapper} key={(Math.floor(Math.random() * 1000))}>
                     <div className={styles.weather}>
+                        <div className={styles.upDateWrapper}>
+                            <p className={styles.updateTimeTitle}>data aktualizacji</p>
+                            <p className={styles.updateTimeTitle}>{history.current?.last_updated}</p>
+                        </div>
                         <p className={styles.locationName}>{history.location.name}</p>
                         <p className={styles.celsi}>{history.current?.feelslike_c}°C</p>
                         <img className={styles.imgIcon} src={history.current.condition.icon} alt='weatherIcon'></img>

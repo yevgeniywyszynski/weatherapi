@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export const getWeather = ({weather}) => weather;
+export const getForecast = ({weather}) => weather.forecast
 
 const reducerName = 'weather';
 const createActionName = name => `app/${reducerName}/${name}`;
@@ -23,7 +24,7 @@ export const loadWeatherRequest = (searchPharse) => {
         dispatch(startRequest());
 
         try {
-            let weatherData = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=cad5cd8da0bd44f7b00104658220904&q=${searchPharse}`)
+            let weatherData = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=cad5cd8da0bd44f7b00104658220904&q=${searchPharse}&days=4`)
             dispatch(loadWeather(weatherData.data))
             dispatch(endRequest())
         } catch(e) {
@@ -42,7 +43,7 @@ export default function reducer(statePart = [], action = {}) {
         case END_REQUEST: 
             return {...statePart, request: {pending: false, error: null, success: true}}
         case ERROR_REQUEST: 
-            return {...statePart, request: { pending: false, error: action.error, success: false}}
+            return {...statePart, request: { pending: false, error: action.payload.error, success: false}}
         default:
             return statePart
     }
