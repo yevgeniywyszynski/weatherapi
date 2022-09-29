@@ -6,10 +6,9 @@ import {formatDate} from '../../common/date_tools'
 
 
 const Home = ({loadWeatherRequest, weatherRedux,forecastdayList}) => {
-    console.log('weather data', weatherRedux)
-    console.log('prognoza', forecastdayList)
 
     useEffect(() => {
+        console.log('prognoza', forecastdayList)
         loadWeatherRequest('Warsaw')
     }, [])
 
