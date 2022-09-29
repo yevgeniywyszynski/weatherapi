@@ -33,6 +33,11 @@ const Home = ({loadWeatherRequest, weatherRedux,forecastdayList}) => {
                 </div>
             </div>
             }
+            <div>
+                {forecastdayList ? forecastdayList.forecastday.slice(1).map(day => (
+                    <p>{day.day.maxtemp_c}</p>
+                )) : null }
+            </div>
         </div>
     )
 }
