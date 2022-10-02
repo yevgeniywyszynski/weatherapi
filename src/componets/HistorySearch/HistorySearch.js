@@ -4,9 +4,8 @@ import styles from '../HistorySearch/HistorySearch.module.scss';
 const HistorySearch = ({historyList}) => {
     return(
         <>
-        <p className={styles.historyTitle}>Search history</p>
+        {historyList[0] ? <p className={styles.historyTitle}>Search history</p> : null}
         <div className={styles.historyWrapper}>
-            
             {historyList.map(history =>(
                 <div className={styles.weatherWrapper} key={(Math.floor(Math.random() * 1000))}>
                     <div className={styles.weather}>
