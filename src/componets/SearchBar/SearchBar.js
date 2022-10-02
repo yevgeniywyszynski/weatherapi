@@ -18,7 +18,7 @@ const SearchBar = ({changePhrase,loadWeatherRequest,phrase, weatherRedux,addHist
             <input
                 className={styles.inputSearch}
                 type="text"
-                placeholder='Wpisz miasto'
+                placeholder='Search for location...'
                 value = {phrase}
                 onChange={(e)=>changePhrase(e.target.value)}
                 >
@@ -27,7 +27,7 @@ const SearchBar = ({changePhrase,loadWeatherRequest,phrase, weatherRedux,addHist
                 className={styles.btnSearch}
                 onClick={() => searchPhraseValidation(phrase)}
                 >
-                szukaj
+                search
             </button>
         </div>
     )

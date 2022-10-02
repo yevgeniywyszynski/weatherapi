@@ -29,7 +29,7 @@ const Home = ({loadWeatherRequest, weatherRedux,forecastdayList}) => {
                             <img className={styles.imgIcon} src={weatherRedux.current?.condition.icon} alt='weatherIcon'></img>
                             <p className={styles.temperatureTitle}>{weatherRedux.current?.temp_c}°C</p>
                         </div>
-                        <p className={styles.feelsLikeTitle}>odczuwalna {weatherRedux.current?.feelslike_c}°C</p>
+                        <p className={styles.feelsLikeTitle}>like feel{weatherRedux.current?.feelslike_c}°C</p>
                     </div>
                 </div>
                 <div className={styles.nextWeatherDayWraper}>
